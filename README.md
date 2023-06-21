@@ -15,5 +15,5 @@ Adding styles and layout to enhance the visual presentation of the weather app.
 
 ## Live Link
 
-- [@Live Link](https://www.github.com/octokatherine)
+- [@Live Link](https://musical-gnome-5d783a.netlify.app/)
 
