@@ -23,7 +23,7 @@ async function fetchWeatherData(city) {
       return;
     }
 
-    console.log("run");
+   
     locationNotFound.style.display = "none";
     weatherBody.style.display = "flex";
 
@@ -33,25 +33,9 @@ async function fetchWeatherData(city) {
     humidity.innerHTML = `${weatherData.main.humidity}%`;
     windSpeed.innerHTML = `${weatherData.wind.speed}Km/H`;
 
-    switch (weatherData.weather[0].main) {
-        case 'Clouds':
-            weather_img.src = "/assets/cloud.png";
-            break;
-        case 'Clear':
-            weather_img.src = "/assets/clear.png";
-            break;
-        case 'Rain':
-            weather_img.src = "/assets/rain.png";
-            break;
-        case 'Mist':
-            weather_img.src = "/assets/mist.png";
-            break;
-        case 'Snow':
-            weather_img.src = "/assets/snow.png";
-            break;
-    }
+   
 
-    console.log(weatherData);
+    //console.log(weatherData);
   } catch (error) {
     console.error("Error fetching weather data:", error);
   }
@@ -59,7 +43,7 @@ async function fetchWeatherData(city) {
 
 searchBtn.addEventListener("click", () => {
   const city = inputBox.value.trim();
-  city.value=""
+  
 
   if (city) {
     fetchWeatherData(city);
