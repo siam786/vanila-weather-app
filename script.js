@@ -59,6 +59,7 @@ async function fetchWeatherData(city) {
 
 searchBtn.addEventListener("click", () => {
   const city = inputBox.value.trim();
+  city.value=""
 
   if (city) {
     fetchWeatherData(city);

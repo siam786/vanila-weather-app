@@ -8,17 +8,25 @@
 }
 
 body {
+  background-color: #111927;
+  background-image: 
+        radial-gradient(at 47% 33%, hsl(162.00, 77%, 40%) 0, transparent 59%), 
+        radial-gradient(at 82% 65%, hsl(218.00, 39%, 11%) 0, transparent 55%);
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #34495e;
+ 
 }
 
 .container {
   width: 400px;
   height: min-content;
-  background-color: #576574;
+  backdrop-filter: blur(14px) saturate(105%);
+    -webkit-backdrop-filter: blur(14px) saturate(105%);
+    background-color: rgba(17, 25, 40, 0.48);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
   border-radius: 12px;
   padding: 28px;
 }
@@ -64,10 +72,11 @@ body {
   align-items: center;
   flex-direction: column;
   margin-block: 20px;
+  display: flex !important;
 }
 .weather-body img {
   width: 60%;
-  display: flex;
+  
 }
 
 .weather-box {
