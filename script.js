@@ -23,7 +23,6 @@ async function fetchWeatherData(city) {
       return;
     }
 
-   
     locationNotFound.style.display = "none";
     weatherBody.style.display = "flex";
 
@@ -33,8 +32,6 @@ async function fetchWeatherData(city) {
     humidity.innerHTML = `${weatherData.main.humidity}%`;
     windSpeed.innerHTML = `${weatherData.wind.speed}Km/H`;
 
-   
-
     //console.log(weatherData);
   } catch (error) {
     console.error("Error fetching weather data:", error);
@@ -42,8 +39,7 @@ async function fetchWeatherData(city) {
 }
 
 searchBtn.addEventListener("click", () => {
-  const city = inputBox.value.trim();
-  
+  let city = inputBox.value.trim();
 
   if (city) {
     fetchWeatherData(city);
